@@ -1,0 +1,126 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+
+//
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de commond</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #4cae4c;
+        }
+
+        .confirmation {
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ecrire votre information pour la commond</h1>
+        <form id="contactForm">
+            <label for="prenom">prenom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="nom">nom :</label>
+            <input type="text" id="nom" name="nom" required>
+        
+            <label for="numero">numero :</label>
+            <input type="text" id="numero" name="numero" required>
+            <label for="email">email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="nom d'article">nom d'article :</label>
+            <input type="text" id="email" name="nom_article" required>
+            <label for="quantite">quantite :</label>
+            <input type="text" id="quantite" name="quantite" required>
+
+        
+
+            <input type="button" value="Soumettre" onclick="validateForm()">
+        </form>
+        <p id="confirmationCommond" class="confirmation"></p>
+    </div>
+
+ <script src="index.js"></script>
+</html>
+
+
+ -->
+
+
+
+//
+function validateForm() {
+    // Récupérer les valeurs des champs du formulaire
+    let prenom = document.getElementById('prenom').value;
+    let nom = document.getElementById('nom').value;
+    let numero = document.getElementById('numero').value;
+    let email = document.getElementById('email').value;
+    let nom_article = document.getElementById('nom_article').value;
+    let quantite = document.getElementById('quantite').value;
+
+    // Vérifier que tous les champs sont remplis
+    if (prenom === "" || nom === "" || numero === "" || email === "" || nom_article === "" || quantite === "")  {
+        alert("Tous les champs doivent être remplis !");
+    } else {
+        // Afficher un message de confirmation
+        document.getElementById('confirmationCommond').innerText = "Merci pour votre commond, " + prenom + "!";
+        // Réinitialiser le formulaire
+        document.getElementById('contactForm').reset();
+    }
+}
+ 

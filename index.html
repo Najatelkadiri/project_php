@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;font-family: Andalus;">Ecrire votre information pour la commande</h1>
+        <div class="mb-4">
+            <label for="name" class="form-lebel">CIN:</label><br>
+            <input type="text" placeholder="entrer le cin" class="form-control" id="cin">
+            <span class="login1" id="s1"></span>
+        </div>
+        <div class="mb-4">
+            <label for="name" class="form-lebel">Nom:</label><br>
+            <input type="text" placeholder="entrer le nom" class="form-control" id="nom">
+            <span class="login2" id="s2"></span>
+        </div>
+        <div class="mb-4">
+            <label for="name" class="form-lebel">Prenom:</label><br>
+            <input type="text" placeholder="entrer le prenom" class="form-control" id="prenom">
+            <span class="login3" id="s3"></span>
+        </div>
+      
+        <div class="mb-4">
+            <label for="name" class="form-lebel">Adress:</label><br>
+            <input type="text" placeholder="entrer le adress" class="form-control" id="adress">
+            <span class="login5" id="s5" ></span>
+        </div>
+        <div class="mb-4">
+            <label for="name" class="form-lebel">Telephone:</label><br>
+            <input type="tel" placeholder="entrer le telephone" class="form-control" id="tele">
+            <span class="login6" id="s6"></span>
+        </div>
+        <div class="mb-4">
+            <label for="name" class="form-lebel">E-mail:</label><br>
+            <input type="email" placeholder="entrer le email" class="form-control" id="email">
+            <span class="login7" id="s7"></span>
+        </div>
+       
+       
+        <div class="mb-4">
+            <input type="button"  value="Envoyer" id="btn-envoyer"/>
+        </div>
+    </div>
+    <script  src="index.js"></script>
+</body>
+</html>
